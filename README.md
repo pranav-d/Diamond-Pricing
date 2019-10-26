@@ -9,7 +9,7 @@ Predict the prize for diamond sample by developing regression, decision trees, n
 ##### 4. score_diamond_price.R
 
 
-Data cleaning
+#### Data cleaning
 
 1.	Read the diamond price raw data file in R.
 2.	The diamond raw dataset has the response variable as diamond Price in USD and the explanatory variables such as carat, cut, color, clarity, X (length), Y (width), Z (depth), table (width of top of diamond relative to widest point).
@@ -17,7 +17,7 @@ Data cleaning
 4.	Drop the rows with missing values for input variables.
 5.	Plot of price vs id shows that the raw diamond file may be sourced from two different sub populations. Hence, it’s decided to create a new index variable based on id and carat values.
 
-Statistical analysis
+#### Statistical analysis
 
 1.	Split the clean data into 70/30 training and validation split.
 2.	Fit linear regression model with price as response variable and carat, cut, color, clarity, X (length), Y (width), Z (depth), table and new index as explanatory variables on the training data set.
@@ -30,7 +30,7 @@ and sample fraction as 0.55 (Parameter specifies the fraction of observations to
 8.	The new index variable that we created in the raw dataset for building models is not available in the scoring dataset. We used random forest and neural network models to predict index variable. 
 9.	Use least MSE (mean squared error) on validation data as the criteria for model selection. 
 
-Model Summary and prediction
+#### Model Summary and prediction
 
 1.	Out of several models such as Random Forest, Neural Network, Decision tree and regression models, we chose Random forest because it gave the least MSE on validation data.
 2.	Create 99% CI for the sum of predicted price of diamonds which is ($19,450,456, $20,953,305).
